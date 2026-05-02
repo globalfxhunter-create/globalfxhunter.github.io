@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Forex Hunter | Pure ICT Trading Mentorship</title>
+  <meta name="description" content="Global Forex Hunter is a professional trading mentorship platform teaching pure ICT concepts, liquidity, market structure, time-based execution, and institutional price delivery for forex and futures traders." />
+  <meta name="keywords" content="Global Forex Hunter, Global FX Hunter, ICT trading, forex mentorship, futures trading, liquidity, fair value gap, market structure shift, Tamil ICT, trading mentorship India" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: 0.3s ease;
+      margin: 8px;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #050505;
+    }
+
+    .btn-gold:hover {
+      background: #f2ca52;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-outline:hover {
+      background: #d4af37;
+      color: #050505;
+      transform: translateY(-2px);
+    }
+
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #d4af37;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.92)),
+        radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 35%);
+      padding-top: 100px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      font-size: 19px;
+      color: #d6d6d6;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      color: #d4af37;
+      border: 1px solid rgba(212,175,55,0.4);
+      padding: 8px 16px;
+      border-radius: 100px;
+      margin-bottom: 22px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #bbbbbb;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #0d0d0d, #151515);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: 16px;
+      padding: 28px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.55);
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p,
+    .card li {
+      color: #cfcfcf;
+      font-size: 15px;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 12px;
+    }
+
+    .about {
+      background: #090909;
+    }
+
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-box {
+      border-left: 4px solid #d4af37;
+      padding: 26px;
+      background: #111;
+      border-radius: 12px;
+    }
+
+    .about-box p {
+      color: #d0d0d0;
+      margin-bottom: 14px;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .highlight-item {
+      background: #111;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(212,175,55,0.15);
+    }
+
+    .highlight-item strong {
+      color: #d4af37;
+    }
+
+    .programs {
+      background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 45%);
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 900;
+      margin: 18px 0;
+      color: #ffffff;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(212,175,55,0.12);
+      color: #d4af37;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .results {
+      background: #090909;
+    }
+
+    .testimonial {
+      font-style: italic;
+    }
+
+    .cta {
+      text-align: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.9)),
+        radial-gradient(circle at center, rgba(212,175,55,0.22), transparent 35%);
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #d3d3d3;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      background: #000;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      color: #999;
+      font-size: 14px;
+    }
+
+    .disclaimer {
+      max-width: 950px;
+      margin: 24px auto 0;
+      font-size: 12px;
+      color: #888;
+    }
+
+    @media (max-width: 900px) {
+      .grid,
+      .about-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">GLOBAL FX HUNTER</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#concepts">ICT Concepts</a>
+          <a href="#programs">Mentorship</a>
+          <a href="#results">Results</a>
+          <a href="#contact">Join</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">Pure ICT Trading Mentorship</div>
+      <h1>Master the Market with <span class="gold">Institutional Logic</span></h1>
+      <p>
+        Global Forex Hunter helps serious traders learn pure ICT concepts, liquidity logic,
+        market structure, time-based execution, and disciplined trade management for forex and futures markets.
+      </p>
+      <a class="btn btn-gold" href="#contact">Join Mentorship</a>
+      <a class="btn btn-outline" href="#programs">View Programs</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-wrap">
+      <div class="about-box">
+        <h2>About <span class="gold">Global Forex Hunter</span></h2>
+        <p>
+          Global Forex Hunter is built for traders who are tired of random signals, confusing indicators,
+          and mixed trading concepts. Our focus is simple: pure ICT, real market structure, and institutional price delivery.
+        </p>
+        <p>
+          We teach traders how to understand why price moves, where liquidity rests, how smart money engineers delivery,
+          and how to build a repeatable trading model with confidence and discipline.
+        </p>
+      </div>
+
+      <div class="highlight-list">
+        <div class="highlight-item"><strong>Mission:</strong> Build independent traders, not signal followers.</div>
+        <div class="highlight-item"><strong>Style:</strong> Pure ICT concepts with clear execution models.</div>
+        <div class="highlight-item"><strong>Markets:</strong> Forex, Gold, Nasdaq, and Futures trading models.</div>
+        <div class="highlight-item"><strong>Focus:</strong> Liquidity, time, price delivery, and disciplined risk.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concepts">
+    <div class="container">
+      <div class="section-title">
+        <h2>What You Will <span class="gold">Learn</span></h2>
+        <p>Structured ICT education designed to help you read price with clarity and execute with confidence.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Liquidity Logic</h3>
+          <p>Understand buy-side and sell-side liquidity, stop hunts, liquidity sweeps, and draw on liquidity.</p>
+        </div>
+        <div class="card">
+          <h3>Market Structure</h3>
+          <p>Learn MSS, displacement, swing logic, and how to separate real structure from noise.</p>
+        </div>
+        <div class="card">
+          <h3>PD Arrays</h3>
+          <p>Master FVG, Order Blocks, Breakers, Inversion FVG, premium/discount, and refinement logic.</p>
+        </div>
+        <div class="card">
+          <h3>Time-Based Models</h3>
+          <p>Use Asia, London, New York, macro windows, and 90-minute cycles for better execution timing.</p>
+        </div>
+        <div class="card">
+          <h3>Trade Execution</h3>
+          <p>Build entry models using liquidity sweep, displacement, FVG entry, confirmation, and invalidation.</p>
+        </div>
+        <div class="card">
+          <h3>Risk Management</h3>
+          <p>Learn RR planning, trade management, journaling, and the discipline required for long-term growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="programs">
+    <div class="container">
+      <div class="section-title">
+        <h2>Mentorship <span class="gold">Programs</span></h2>
+        <p>Choose the right path based on your current trading level.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Beginner Track</span>
+          <h3>Beginner to Pro</h3>
+          <div class="price">₹15,000</div>
+          <p>A complete structured program for traders who want to build a strong foundation from scratch.</p>
+          <ul>
+            <li>Market structure basics</li>
+            <li>Liquidity and PD arrays</li>
+            <li>Session timing and bias</li>
+            <li>Entry model development</li>
+            <li>Risk and trade management</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag">Advanced Track</span>
+          <h3>Advanced ICT Model</h3>
+          <div class="price">₹7,500</div>
+          <p>For traders who already understand basics and want to refine bias, execution, and consistency.</p>
+          <ul>
+            <li>Advanced liquidity mapping</li>
+            <li>HTF to LTF refinement</li>
+            <li>Macro window execution</li>
+            <li>Nasdaq and Gold models</li>
+            <li>Live-market breakdowns</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag">Community</span>
+          <h3>Live Learning Group</h3>
+          <div class="price">Apply</div>
+          <p>For serious students who want daily updates, live session discussions, homework, and community learning.</p>
+          <ul>
+            <li>WhatsApp / Discord updates</li>
+            <li>Daily bias practice</li>
+            <li>Chart review guidance</li>
+            <li>Live session accountability</li>
+            <li>Student progress tracking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results" class="results">
+    <div class="container">
+      <div class="section-title">
+        <h2>Student <span class="gold">Growth</span></h2>
+        <p>Our focus is not hype. Our focus is helping students think, analyze, and execute like independent traders.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card testimonial">
+          <p>“The mentorship helped me understand liquidity and market structure clearly. Now I know why price moves, not just where to enter.”</p>
+        </div>
+        <div class="card testimonial">
+          <p>“The live market breakdowns made ICT concepts practical. Bias, liquidity, and execution started making sense.”</p>
+        </div>
+        <div class="card testimonial">
+          <p>“Before this, I was following random signals. Now I focus on model-based trading and journaling.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="container">
+      <h2>Ready to Become an <span class="gold">Independent Trader?</span></h2>
+      <p>
+        Join Global Forex Hunter and start learning pure ICT concepts with structure, discipline,
+        and real market understanding.
+      </p>
+      <a class="btn btn-gold" href="https://wa.me/919999999999" target="_blank">Apply on WhatsApp</a>
+      <a class="btn btn-outline" href="https://www.youtube.com/@globalfxhunter" target="_blank">Watch YouTube</a>
+
+      <p class="disclaimer">
+        Disclaimer: Trading forex, futures, and financial markets involves risk. Global Forex Hunter provides educational content only and does not provide financial advice, investment recommendations, or guaranteed results. Always trade with proper risk management.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Global Forex Hunter. Pure ICT. No Noise. Only Real Market Understanding.
+    </div>
+  </footer>
+</body>
+</html>
